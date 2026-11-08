@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GVP - Gestión de Parqueaderos</title>
+    <link rel="stylesheet" href="styleindex.css">
+</head>
+<body>
+
+    <div id="sec-inicio" class="seccion activa">
+        <section class="start">
+            <div class="img">
+                <img src="https://www.wradio.com.co/resizer/v2/CNVLIH5MPJAM3N7CFHFYZTGUUI.jpg?auth=d95d120b35548dc34d3f611c74f3fc12e2ca1d27d1e5176e0ff1c8c18f0f0a02" alt="imagen de fondo de referencia de parqueaderos" height="300" width="600">
+            </div>
+
+            <div class="text">
+                <h2>꧁ᬊᬁtu parqueadero, más cerca, más seguro.ᬊ᭄꧂ツ</h2>
+
+                <div class="cuerpo-text">
+                    <p class="descripcion">
+                        Encuentra parqueaderos disponibles, reserva tu espacio y cuida lo que te mueve. En GVP, no solo te ofrecemos un lugar seguro, también te damos la tranquilidad de que tu vehículo estará en buenas condiciones mientras realizas tus compras y gestiones en el centro de Medellín. Diseñado para comerciantes y personas que necesitan moverse, abastecerse y hacer crecer sus negocios, con un servicio rápido, fácil y confiable.
+                    </p>
+         
+                    <div class="logo"> 
+                        <img src="https://i.ibb.co/3YFSfc15/Whats-App-Image-2026-10-19-at-2-24-34-PM.jpg" alt="logo" width="100" height="100">
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <div class="seguridad">
+            <h2>──────── ⋆⋅☆──Tu vehículo seguro☆⋅⋆ ───────────</h2>
+            <p>
+                Protege tu carro o motocicleta mientras realizas tus actividades.
+            </p>
+        </div>
+
+        <div class="beneficios">
+            <div class="beneficio">
+                <h3>Seguridad</h3>
+                <p>Espacios controlados para tu vehículo.</p>
+            </div>
+
+            <div class="beneficio">
+                <h3>Ubicación</h3>
+                <p>Parqueaderos cerca del centro.</p>
+            </div>
+
+            <div class="beneficio">
+                <h3>Ahorra tiempo</h3>
+                <p>Encuentra un espacio rápidamente.</p>
+            </div>
+        </div>
+
+        <div class="formularios">
+            <button class="boton usuario" onclick="mostrar('sec-usuario')">
+                Formulario para nuevo usuario
+                <span class="flecha">→</span>
+            </button>
+
+            <button class="boton administrador" onclick="mostrar('sec-parqueadero')">
+                Formulario para administrador
+                <span class="flecha">→</span>
+            </button>
+
+            <button class="boton vehiculo" onclick="mostrar('sec-vehiculo')">
+                Formulario para vehículo
+                <span class="flecha">→</span>
+            </button>
+        </div>
+
+        <div class="vip">
+            <button class="boton-vip" onclick="mostrar('sec-vehiculo')">✦·┈๑⋅⋯⋯VIP⋯⋅๑┈·✦</button>
+        </div>
+
+        <footer>
+            <p>GVP - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <div id="sec-usuario" class="seccion">
+        <header class="menu-navegacion">
+            <input type="checkbox" id="menu-toggle-1" class="menu-toggle">
+            <label for="menu-toggle-1" class="menu-icon">☰ Menú</label>
+            
+            <nav class="menu-links">
+                <a onclick="mostrar('sec-inicio')">Inicio</a>
+                <a onclick="mostrar('sec-usuario')">Registro Usuario</a>
+                <a onclick="mostrar('sec-parqueadero')">Registro Parqueadero</a>
+                <a onclick="mostrar('sec-vehiculo')">Registro Vehículo</a>
+            </nav>
+        </header>
+
+        <div class="caja-formulario">
+            <h1>Registro de Usuario</h1>
+            <p>Ingresa la información del usuario</p>
+
+            <form onsubmit="event.preventDefault();">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" placeholder="Ej: Neil Torres" required>
+
+                <label for="nacimiento">Fecha de Nacimiento</label>
+                <input type="date" id="nacimiento" required>
+
+                <label for="cedula-user">Cédula de Ciudadanía</label>
+                <input type="text" id="cedula-user" placeholder="Ej: 1.045.532.146" required>
+
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" placeholder="Ej: calle 37 #42-32" required>
+
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" id="correo" placeholder="Ej: usuario@correo.com" required>
+
+                <label for="ciudad">Ciudad</label>
+                <input type="text" id="ciudad" placeholder="Ej: Medellín" required>
+
+                <label for="telefono">Teléfono Principal</label>
+                <input type="tel" id="telefono" placeholder="Ej: 324 327 1387" required>
+
+                <label for="genero">Género</label>
+                <select id="genero" required>
+                    <option value="">Selecciona una opción</option>
+                    <option>Masculino</option>
+                    <option>Femenino</option>
+                    <option>Otro</option>
+                    <option>Prefiero no decirlo</option>
+                </select>
+
+                <label for="telefono-alterno">Teléfono Alterno</label>
+                <input type="tel" id="telefono-alterno" placeholder="Ej: 300 000 0000">
+
+                <label for="tipo">Tipo de Usuario</label>
+                <select id="tipo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option>Cliente</option>
+                    <option>Dueño de Parqueadero</option>
+                </select>
+
+                <button type="submit" class="boton-guardar">Guardar Información</button>
+            </form>
+
+            <a onclick="mostrar('sec-inicio')" class="boton-salida">Regresar a la Página Principal</a>
+        </div>
+    </div>
+
+
+    <!-- ==================== REGISTRO DE PARQUEADERO ==================== -->
+    <div id="sec-parqueadero" class="seccion">
+        <header class="menu-navegacion">
+            <input type="checkbox" id="menu-toggle-2" class="menu-toggle">
+            <label for="menu-toggle-2" class="menu-icon">☰ Menú</label>
+            
+            <nav class="menu-links">
+                <a onclick="mostrar('sec-inicio')">Inicio</a>
+                <a onclick="mostrar('sec-usuario')">Registro Usuario</a>
+                <a onclick="mostrar('sec-parqueadero')">Registro Parqueadero</a>
+                <a onclick="mostrar('sec-vehiculo')">Registro Vehículo</a>
+            </nav>
+        </header>
+
+        <div class="caja-formulario">
+            <h1>Registro de Parqueadero</h1>
+            <p>Ingresa la información del propietario y del parqueadero</p>
+
+            <form onsubmit="event.preventDefault();">
+                <label for="propietario">Nombre del Propietario</label>
+                <input type="text" id="propietario" placeholder="Ej: Juan Pérez García" required>
+
+                <label for="cedula-prop">Cédula</label>
+                <input type="text" id="cedula-prop" placeholder="Ej: 1.234.567.890" required>
+
+                <label for="telefono-prop">Número de teléfono</label>
+                <input type="tel" id="telefono-prop" placeholder="Ej: 300 123 4567" required>
+
+                <label for="nombre-parqueadero">Nombre del Parqueadero</label>
+                <input type="text" id="nombre-parqueadero" placeholder="Ej: Parqueadero Centro" required>
+
+                <label for="direccion-parq">Dirección del parqueadero</label>
+                <input type="text" id="direccion-parq" placeholder="Ej: Calle 50 # 45-20" required>
+
+                <label for="tel-parq">Número de teléfono del parqueadero</label>
+                <input type="text" id="tel-parq" placeholder="Ej: 001" required>
+
+                <label for="nit">NIT del parqueadero</label>
+                <input type="text" id="nit" placeholder="Ej: 900.123.456-7" required>
+
+                <button type="submit" class="boton-guardar">Guardar información</button>
+            </form>
+
+            <a onclick="mostrar('sec-inicio')" class="boton-salida">Regresar a la Página Principal</a>
+        </div>
+    </div>
+
+
+    <!-- ==================== REGISTRO DE VEHÍCULO ==================== -->
+    <div id="sec-vehiculo" class="seccion">
+        <header class="menu-navegacion">
+            <input type="checkbox" id="menu-toggle-3" class="menu-toggle">
+            <label for="menu-toggle-3" class="menu-icon">☰ Menú</label>
+            
+            <nav class="menu-links">
+                <a onclick="mostrar('sec-inicio')">Inicio</a>
+                <a onclick="mostrar('sec-usuario')">Registro Usuario</a>
+                <a onclick="mostrar('sec-parqueadero')">Registro Parqueadero</a>
+                <a onclick="mostrar('sec-vehiculo')">Registro Vehículo</a>
+            </nav>
+        </header>
+
+        <div class="caja-formulario">
+            <h1>Registro de Vehículo</h1>
+            <p>Ingresa la información del vehículo</p>
+
+            <form onsubmit="event.preventDefault();">
+                <label for="marca">Marca del vehículo</label>
+                <select id="marca" required>
+                    <option value="">Selecciona una marca</option>
+                    <option>Toyota</option>
+                    <option>Chevrolet</option>
+                    <option>Mazda</option>
+                    <option>Renault</option>
+                    <option>Kia</option>
+                    <option>Nissan</option>
+                    <option>Yamaha (Moto)</option>
+                    <option>Honda (Moto)</option>
+                    <option>Suzuki (Moto)</option>
+                    <option>Otra</option>
+                </select>
+
+                <label for="modelo">Modelo / Línea</label>
+                <select id="modelo" required>
+                    <option value="">Selecciona un modelo</option>
+                    <option>Automóvil / Sedán</option>
+                    <option>Camioneta / SUV</option>
+                    <option>Campero</option>
+                    <option>Motocicleta (Scooter / Automática)</option>
+                    <option>Motocicleta (Deportiva / Mecánica)</option>
+                </select>
+
+                <label for="anio">Año del vehículo</label>
+                <select id="anio" required>
+                    <option value="">Selecciona el año</option>
+                    <option>2026</option>
+                    <option>2025</option>
+                    <option>2024</option>
+                    <option>2023</option>
+                    <option>2022</option>
+                    <option>2021</option>
+                    <option>2020 o anterior</option>
+                </select>
+
+                <label for="color">Color del Vehículo</label>
+                <select id="color" required>
+                    <option value="">Selecciona un color</option>
+                    <option>Negro</option>
+                    <option>Blanco</option>
+                    <option>Gris / Plata</option>
+                    <option>Rojo</option>
+                    <option>Azul</option>
+                    <option>Otro</option>
+                </select>
+
+                <label for="placa">Placa del vehículo</label>
+                <input type="text" id="placa" placeholder="Ej: ABC 123" required>
+
+                <button type="submit" class="boton-guardar">Guardar información</button>
+            </form>
+
+            <a onclick="mostrar('sec-inicio')" class="boton-salida">Regresar a la Página Principal</a>
+        </div>
+    </div>
+
+    <!-- Script de control de navegación entre vistas -->
+    <script>
+        function mostrar(idSeccion) {
+            var secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(function(sec) {
+                sec.classList.remove('activa');
+            });
+            document.getElementById(idSeccion).classList.add('activa');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
