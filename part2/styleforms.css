@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    
+    /* Imagen de fondo de parqueaderos con un desvanecimiento (degradado oscuro) hacia abajo */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.85)), 
+                url('https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    /* Centrar todo en la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Caja blanca que contiene el formulario */
+.caja-formulario {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #202528;
+    margin-top: 0;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #202528;
+    font-size: 14px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Estilo simple si un campo obligatorio se deja vacío y se intenta enviar */
+input:invalid, select:invalid {
+    border-color: #ff4757;
+}
+
+/* Botón de guardar */
+.boton-guardar {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #ffc928;
+    color: #202528;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-guardar:hover {
+    background-color: #e0b400;
+}
+
+/* Botón de salida para regresar al inicio */
+.boton-salida {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #202528;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.boton-salida:hover {
+    background-color: #33393d;
+}
+/* --- ESTILOS PARA EL MENÚ DE HAMBURGUESA BÁSICO --- */
+
+.menu-navegacion {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+/* Ocultar la casilla de verificación (checkbox) */
+.menu-toggle {
+    display: none;
+}
+
+/* Diseño del botón que dice "Menú" */
+.menu-icon {
+    background-color: #ffc928;
+    color: #202528;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+}
+
+.menu-icon:hover {
+    background-color: #e0b400;
+}
+
+/* La lista de enlaces del menú que aparece al hacer clic */
+.menu-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    overflow: hidden;
+    width: 200px;
+}
+
+.menu-links a {
+    padding: 12px;
+    color: #202528;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu-links a:hover {
+    background-color: #f4f4f4;
+    color: #ffc928;
+}
+
+/* Cuando se presiona el botón, se despliega el menú usando el selector ":checked" */
+.menu-toggle:checked ~ .menu-links {
+    display: flex;
+}
+/* --- MENSAJE DE ERROR FLOTANTE EN EL MEDIO --- */
+.mensaje-error-flotante {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 71, 87, 0.95); /* Rojo con transparencia */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    text-align: center;
+}
+
+/* Magia de CSS puro: Cuando intentas enviar el formulario y hay campos requeridos vacíos, 
+   el navegador activa el estado inválido y muestra el mensaje flotante */
+form:user-invalid .mensaje-error-flotante,
+form:invalid:active ~ .mensaje-error-flotante {
+    display: block;
+}

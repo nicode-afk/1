@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GVP - Registro de Usuario</title>
+    <!-- Vinculamos nuestro archivo de estilos CSS básico -->
+    <link rel="stylesheet" href="styleforms.css">
+</head>
+<body>
+
+    <!-- Contenedor principal del formulario -->
+    <div class="caja-formulario">
+        
+        <h1>Registro de Usuario</h1>
+        <p>Ingresa la información del usuario</p>
+
+        <!-- El atributo 'required' hace que si un campo no se llena, salga un error automático -->
+        <form>
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" placeholder="Ej: Neil Torres" required>
+
+            <label for="nacimiento">Fecha de Nacimiento</label>
+            <input type="date" id="nacimiento" required>
+
+            <label for="cedula">Cédula de Ciudadanía</label>
+            <input type="text" id="cedula" placeholder="Ej: 1.045.532.146" required>
+
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" placeholder="Ej: calle 37 #42-32" required>
+
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" placeholder="Ej: usuario@correo.com" required>
+
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" placeholder="Ej: Medellín" required>
+
+            <label for="telefono">Teléfono Principal</label>
+            <input type="tel" id="telefono" placeholder="Ej: 324 327 1387" required>
+
+            <label for="genero">Género</label>
+            <select id="genero" required>
+                <option value="">Selecciona una opción</option>
+                <option>Masculino</option>
+                <option>Femenino</option>
+                <option>Otro</option>
+                <option>Prefiero no decirlo</option>
+            </select>
+
+            <label for="telefono-alterno">Teléfono Alterno</label>
+            <input type="tel" id="telefono-alterno" placeholder="Ej: 300 000 0000">
+
+            <label for="tipo">Tipo de Usuario</label>
+            <select id="tipo" required>
+                <option value="">Selecciona una opción</option>
+                <option>Cliente</option>
+                <option>Dueño de Parqueadero</option>
+            </select>
+
+            <!-- Botón para enviar -->
+            <button type="submit" class="boton-guardar">Guardar Información</button>
+        </form>
+
+        <!-- Botón de salida para volver a la página principal -->
+        <a href="index.html" class="boton-salida">Regresar a la Página Principal</a>
+
+    </div>
+    
+
+</body>
+</html>

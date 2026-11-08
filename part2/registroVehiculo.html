@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GVP - Registro de Vehículo</title>
+    <!-- Vinculamos el mismo archivo style.css para mantener el estilo idéntico -->
+    <link rel="stylesheet" href="styleforms.css">
+</head>
+<body>
+
+    <!-- Menú de hamburguesa general para navegar fácilmente -->
+    <header class="menu-navegacion">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰ Menú</label>
+        
+        <nav class="menu-links">
+            <a href="index.html">Inicio</a>
+            <a href="registroUsuario.html">Registro Usuario</a>
+            <a href="parqueadero.html">Registro Parqueadero</a>
+            <a href="registroVehiculo.html">Registro Vehículo</a>
+        </nav>
+    </header>
+
+    <!-- Contenedor del formulario con el mismo diseño compacto -->
+    <div class="caja-formulario">
+        <h1>Registro de Vehículo</h1>
+        <p>Ingresa la información del vehículo</p>
+
+        <!-- Formulario con menús desplegables para evitar confusiones -->
+        <form>
+            <label for="marca">Marca del vehículo</label>
+            <select id="marca" required>
+                <option value="">Selecciona una marca</option>
+                <option>Toyota</option>
+                <option>Chevrolet</option>
+                <option>Mazda</option>
+                <option>Renault</option>
+                <option>Kia</option>
+                <option>Nissan</option>
+                <option>Yamaha (Moto)</option>
+                <option>Honda (Moto)</option>
+                <option>Suzuki (Moto)</option>
+                <option>Otra</option>
+            </select>
+
+            <label for="modelo">Modelo / Línea</label>
+            <select id="modelo" required>
+                <option value="">Selecciona un modelo</option>
+                <option>Automóvil / Sedán</option>
+                <option>Camioneta / SUV</option>
+                <option>Campero</option>
+                <option>Motocicleta (Scooter / Automática)</option>
+                <option>Motocicleta (Deportiva / Mecánica)</option>
+            </select>
+
+            <label for="anio">Año del vehículo</label>
+            <select id="anio" required>
+                <option value="">Selecciona el año</option>
+                <option>2026</option>
+                <option>2025</option>
+                <option>2024</option>
+                <option>2023</option>
+                <option>2022</option>
+                <option>2021</option>
+                <option>2020 o anterior</option>
+            </select>
+
+            <label for="color">Color del Vehículo</label>
+            <select id="color" required>
+                <option value="">Selecciona un color</option>
+                <option>Negro</option>
+                <option>Blanco</option>
+                <option>Gris / Plata</option>
+                <option>Rojo</option>
+                <option>Azul</option>
+                <option>Otro</option>
+            </select>
+
+            <label for="placa">Placa del vehículo</label>
+            <input type="text" id="placa" placeholder="Ej: ABC 123" required>
+
+            <!-- Botón de guardar -->
+            <button type="submit" class="boton-guardar">Guardar información</button>
+        </form>
+
+        <!-- Botón de salida para regresar al inicio -->
+        <a href="index.html" class="boton-salida">Regresar a la Página Principal</a>
+    </div>
+    
+
+</body>
+</html>

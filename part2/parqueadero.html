@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GVP - Registro de Parqueadero</title>
+    <link rel="stylesheet" href="styleforms.css">
+</head>
+<body>
+
+    <!-- Menú de hamburguesa simple -->
+    <header class="menu-navegacion">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰ Menú</label>
+        
+        <nav class="menu-links">
+            <a href="index.html">Inicio</a>
+            <a href="registroUsuario.html">Registro Usuario</a>
+            <a href="parqueadero.html">Registro Parqueadero</a>
+            <a href="registroVehiculo.html">Registro Vehículo</a>
+        </nav>
+    </header>
+
+    <!-- Contenedor del Formulario -->
+    <div class="caja-formulario">
+        <h1>Registro de Parqueadero</h1>
+        <p>Ingresa la información del propietario y del parqueadero</p>
+
+        <form>
+            <label for="propietario">Nombre del Propietario</label>
+            <input type="text" id="propietario" placeholder="Ej: Juan Pérez García" required>
+
+            <label for="cedula">Cédula</label>
+            <input type="text" id="cedula" placeholder="Ej: 1.234.567.890" required>
+
+            <label for="telefono-prop">Número de teléfono</label>
+            <input type="tel" id="telefono-prop" placeholder="Ej: 300 123 4567" required>
+
+            <label for="nombre-parqueadero">Nombre del Parqueadero</label>
+            <input type="text" id="nombre-parqueadero" placeholder="Ej: Parqueadero Centro" required>
+
+            <label for="direccion-parq">Dirección del parqueadero</label>
+            <input type="text" id="direccion-parq" placeholder="Ej: Calle 50 # 45-20" required>
+
+            <label for="tel-parq">Número de teléfono del parqueadero</label>
+            <input type="text" id="tel-parq" placeholder="Ej: 001" required>
+
+            <label for="nit">NIT del parqueadero</label>
+            <input type="text" id="nit" placeholder="Ej: 900.123.456-7" required>
+
+            <button type="submit" class="boton-guardar">Guardar información</button>
+        </form>
+
+        <a href="index.html" class="boton-salida">Regresar a la Página Principal</a>
+    </div>
+    
+
+</body>
+</html>
